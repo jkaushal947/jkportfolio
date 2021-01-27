@@ -2,30 +2,52 @@ body {
     font-family: 'Lato';
 }
 
-h1, h2 {
+h1,
+h2 {
     text-shadow: 2px 2px 4px #fff;
 }
 
+h1.profile_name {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 h2.profile_title {
-    color: beige;
+    margin-top: 60px;
+    padding: 4px 8px;
+    color: #2C3E50;
     font-weight: bold;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px white;
 }
 
 p.lead {
     font-weight: bold;
-    text-shadow: 2px 2px 4px #fff;
+    /*color: beige;*/
+    text-align: center;
+    line-height: 2;
+}
+
+p.cv {
+    font-weight: bold;
+    text-align: center;
+    /*color: beige;*/
+    line-height: 3;
 }
 
 p.skill {
     font-size: 130%;
     font-weight: bold;
+    color: beige;
+        text-shadow: 2px 2px 4px black;
 }
 
 p.soft_skills {
     font-size: 130%;
     font-weight: bold;
     word-spacing: 4px;
+    color: beige;
+    text-shadow: 2px 2px 4px black;
 }
 
 img.skill_image {
@@ -34,7 +56,15 @@ img.skill_image {
 }
 
 img.profile_image {
+    height: 335px;
     border-radius: 30px;
+    float: left;
+}
+
+@media (min-width: 992px) {
+    img.profile_image {
+        float: none;
+    }
 }
 
 h1,
@@ -49,13 +79,12 @@ h6 {
 
 hr.star-light,
 hr.star-dark {
-    max-width: 15rem;
     padding: 0;
     text-align: center;
     border: none;
     border-top: solid 0.25rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -95,12 +124,22 @@ hr.star-dark:after {
 }
 
 section {
-    padding: 6rem 0;
+    padding: 50px;
+    padding-top: 5rem;
+    padding-bottom: 9rem;
 }
 
 section h2 {
     font-size: 2.25rem;
     line-height: 2rem;
+}
+
+section h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.1rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 2.7rem;
 }
 
 @media (min-width: 992px) {
@@ -137,8 +176,6 @@ section h2 {
 }
 
 #mainNav {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     font-weight: 700;
     font-family: 'Montserrat';
 }
@@ -176,8 +213,6 @@ section h2 {
 
 @media (min-width: 992px) {
     #mainNav {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
         -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
         transition: padding-top 0.3s, padding-bottom 0.3s;
     }
@@ -220,8 +255,8 @@ header.masthead {
 }
 
 header.masthead h1 {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2rem;
 }
 
 header.masthead h2 {
@@ -231,17 +266,17 @@ header.masthead h2 {
 
 @media (min-width: 992px) {
     header.masthead {
-        padding-top: calc(6rem + 106px);
-        padding-bottom: 6rem;
+        padding-top: 10rem;
+        padding-bottom: 15rem;
     }
 
     header.masthead h1 {
-        font-size: 4.75em;
-        line-height: 4rem;
+        font-size: 3rem;
+        /*line-height: 200px;*/
     }
 
     header.masthead h2 {
-        font-size: 1.75em;
+        font-size: 1.3em;
     }
 }
 
@@ -397,14 +432,21 @@ a:active {
 
 .bg-primary {
     background-image: url("20171012_165220.jpg");
+    background-size: cover;
 }
 
 .bg-primary1 {
     background-image: url("IMG_2153.jpg");
+    background-size: cover;
 }
 
 .bg-primary2 {
     background-image: url("2018-01-22_07-21-49.jpg");
+    background-size: cover;
+}
+
+.bg-contact {
+    background-color: #6c757d;
 }
 
 .text-primary {
@@ -447,4 +489,56 @@ a:active {
 .i {
     height: auto;
     width: auto;
+}
+
+.map {
+    margin: auto;
+    float: right;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+li.details {}
+
+li > p {
+    font-weight: bold;
+    color: beige;
+}
+
+.fas fa-download{
+    color: #2C3E50;
 }
